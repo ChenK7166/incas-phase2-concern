@@ -48,7 +48,7 @@ def label_concern(input_list):
     predict_results = []
     for i in tqdm(range(len(prompt_list))):
         result = pipeline(prompt_list[i])
-        predict_results.append(result[0]["generated_text"])
+        predict_results.append(result[0]["generated_text"][len(prompt_list[i]):])
 
     return predict_results
 
@@ -79,16 +79,19 @@ if __name__ == "__main__":
     label_list = label_concern(contentText_list)
 
     print("annotating messages ...")
-    annotations = {}
+    annotation_list = []
     for i in range(len(id_list)):
+        annotations = {}
         annotation={}
         annotation["id"] = id_list[i]
         annotation["contentText"] = contentText_list[i]
         annotation["concern"] = label_list[i]
         annotation["providerName"] = "ta1-usc-isi"
         annotations["id"] = [annotation]
+        annotation_list.append(annotations)
 
-    with open('concern_annotate_{}.json'.format(file), 'w') as json_file:
-        json_file.write(json.dumps(annotations))
+    with open('concern_annotate.json', 'w') as json_file:
+        for annotation in annotation_list:
+            json_file.write(json.dumps(annotation) + '\n')
 
 
