@@ -1,6 +1,6 @@
 # incas-phase2-concern
 
-**How to run**
+## How to build project
 
 * Then download model files from [here](https://drive.google.com/drive/folders/1PNVDQPPMuQuaMDG7hvwUW64W15A4fCuC?usp=sharing). Please keep file annotate.py and the folder `incas_tuned_model` in the same directory.
 
@@ -15,6 +15,7 @@ incas-phase2-concern
 └── prompt.txt
 
 ````
+## How to run
 ```
 python annotate.py --file your_file_name
 ```
