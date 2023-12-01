@@ -87,7 +87,7 @@ if __name__ == "__main__":
         annotation["contentText"] = contentText_list[i]
         annotation["concern"] = label_list[i]
         annotation["providerName"] = "ta1-usc-isi"
-        annotations["id"] = [annotation]
+        annotations[id_list[i]] = [annotation]
         annotation_list.append(annotations)
 
     with open('concern_annotate.json', 'w') as json_file:
