@@ -11,7 +11,7 @@ incas-phase2-concern
 ├── incas_tuned_model --place models here
 ├── Readme.md
 ├── annotate.py
-├── environment.yml
+├── requirements.txt
 └── prompt.txt
 
 ````
