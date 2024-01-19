@@ -17,7 +17,14 @@ incas-phase2-concern
 ````
 ## How to run
 ```
+# Install torch
+CPU: pip3 install torch torchvision torchaudio
+GPU: pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+# Install other lib
 pip install -r requirements.txt
+
+# Run concern model
 python annotate.py --file your_file_name
 ```
 
