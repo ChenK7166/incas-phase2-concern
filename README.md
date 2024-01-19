@@ -12,7 +12,8 @@ incas-phase2-concern
 ├── Readme.md
 ├── annotate.py
 ├── requirements.txt
-└── prompt.txt
+├── small_sample.jsonl
+└── prompt_inference.txt
 
 ````
 ## How to run
